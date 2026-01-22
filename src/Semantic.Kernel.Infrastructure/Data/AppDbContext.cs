@@ -1,0 +1,44 @@
+using Microsoft.EntityFrameworkCore;
+using Semantic.Kernel.Domain.Products;
+using Semantic.Kernel.Domain.Recommendations;
+
+namespace Semantic.Kernel.Infrastructure.Data;
+
+public class AppDbContext : DbContext
+{
+    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+
+    public DbSet<Product> Products { get; set; } = null!;
+    public DbSet<Recommendation> Recommendations { get; set; } = null!;
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.HasPostgresExtension("vector");
+
+        modelBuilder.Entity<Product>(entity =>
+        {
+            entity.ToTable("products");
+            entity.HasKey(x => x.Id);
+            entity.Property(x => x.Id).HasColumnName("id").UseIdentityAlwaysColumn();
+            entity.Property(e => e.Title).HasColumnName("title");
+            entity.Property(e => e.Category).HasColumnName("category");
+            entity.Property(e => e.Summary).HasColumnName("summary");
+            entity.Property(e => e.Description).HasColumnName("description");
+        });
+
+        modelBuilder.Entity<Recommendation>(entity =>
+        {
+            entity.ToTable("recomendations");
+            entity.HasKey(x => x.Id);
+            entity.Property(x => x.Id).HasColumnName("id").UseIdentityAlwaysColumn();
+            entity.Property(e => e.Title).HasColumnName("title");
+            entity.Property(e => e.Category).HasColumnName("category");
+            entity.Property(e => e.Embedding)
+                .HasColumnName("embedding")
+                .HasColumnType("vector(1024)")
+                .HasConversion(
+                    v => new Pgvector.Vector(v),
+                    v => v.ToArray());
+        });
+    }
+}

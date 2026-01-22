@@ -2,7 +2,13 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{32D8B001-4D39-45C2-A7AB-C373629692B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Semantic.Kernel.Vector.WebApi", "src\Semantic.Kernel.Vector.WebApi\Semantic.Kernel.Vector.WebApi.csproj", "{CA8106F9-75C5-46FB-8A38-BED8C0718B36}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Semantic.Kernel.WebApi", "src\Semantic.Kernel.WebApi\Semantic.Kernel.WebApi.csproj", "{CA8106F9-75C5-46FB-8A38-BED8C0718B36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Semantic.Kernel.Infrastructure", "src\Semantic.Kernel.Infrastructure\Semantic.Kernel.Infrastructure.csproj", "{D9F26C2C-F702-4160-A394-A75E955AE686}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Semantic.Kernel.Domain", "src\Semantic.Kernel.Domain\Semantic.Kernel.Domain.csproj", "{0F72AEF3-CADF-4505-9C64-7251964BAD4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Semantic.Kernel.Application", "src\Semantic.Kernel.Application\Semantic.Kernel.Application.csproj", "{DE76BFB8-E7A8-4BAE-854D-8237EE0817F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,8 +20,23 @@ Global
 		{CA8106F9-75C5-46FB-8A38-BED8C0718B36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA8106F9-75C5-46FB-8A38-BED8C0718B36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA8106F9-75C5-46FB-8A38-BED8C0718B36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9F26C2C-F702-4160-A394-A75E955AE686}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9F26C2C-F702-4160-A394-A75E955AE686}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9F26C2C-F702-4160-A394-A75E955AE686}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9F26C2C-F702-4160-A394-A75E955AE686}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F72AEF3-CADF-4505-9C64-7251964BAD4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F72AEF3-CADF-4505-9C64-7251964BAD4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F72AEF3-CADF-4505-9C64-7251964BAD4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F72AEF3-CADF-4505-9C64-7251964BAD4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE76BFB8-E7A8-4BAE-854D-8237EE0817F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE76BFB8-E7A8-4BAE-854D-8237EE0817F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE76BFB8-E7A8-4BAE-854D-8237EE0817F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE76BFB8-E7A8-4BAE-854D-8237EE0817F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{CA8106F9-75C5-46FB-8A38-BED8C0718B36} = {32D8B001-4D39-45C2-A7AB-C373629692B5}
+		{D9F26C2C-F702-4160-A394-A75E955AE686} = {32D8B001-4D39-45C2-A7AB-C373629692B5}
+		{0F72AEF3-CADF-4505-9C64-7251964BAD4D} = {32D8B001-4D39-45C2-A7AB-C373629692B5}
+		{DE76BFB8-E7A8-4BAE-854D-8237EE0817F6} = {32D8B001-4D39-45C2-A7AB-C373629692B5}
 	EndGlobalSection
 EndGlobal
