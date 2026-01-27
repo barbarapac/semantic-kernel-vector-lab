@@ -6,7 +6,7 @@ using Semantic.Kernel.Domain.Recommendations;
 namespace Semantic.Kernel.Application.Recommendations.SeedData;
 
 
-public class SeedDataHandler : IRequestHandler<SeedData.SeedDataCommand>
+public class SeedDataHandler : IRequestHandler<SeedDataCommand>
 {
     private readonly IProductRepository _productRepository;
     private readonly IRecommendationRepository _recommendationRepository;
