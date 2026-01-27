@@ -18,6 +18,8 @@ builder.Services.AddDbContext<AppDbContext>(x =>
     x.UseNpgsql(connectionString, p => p.UseVector());
 });
 
+builder.Services.AddLogging(x => x.AddConsole().SetMinimumLevel(LogLevel.Debug));
+
 builder.Services.AddTransient<OllamaApiClient>(x => new OllamaApiClient(
     uriString: "http://localhost:11434",
     defaultModel: "mxbai-embed-large"
